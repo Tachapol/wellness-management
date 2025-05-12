@@ -1,0 +1,1578 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
+
+
+/* 1. Section Settings */
+/* 2. Section Navbar */
+/* package */
+/* Footer */
+/* input */
+
+/* 1. Section Settings */
+:root{
+    --main-color:#FFEDD1;
+    --border:#CCB187;
+    --black:#13131a;
+    --pop:#DAC39F;
+}
+
+
+*{
+    font-family: 'Playfair Display', sans-serif ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+
+}
+
+html{
+    height: 100%;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+
+}
+
+body{
+    background: var(--main-color);
+    overflow-x: hidden;
+}
+
+/* Section Navbar */
+
+/* Header styles */
+.header {
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--pop);
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 1.5rem 0;
+    }
+
+    #menu-btn {
+        display: inline-block;
+    }
+}
+
+.logo img{
+    display: flex;
+    height: 150px;
+    width: auto;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.header .logo img{
+    width: 300px;
+    object-fit: cover;
+    /* margin-top: 2rem; */
+}
+
+
+/* Section Navbar */
+.header {
+    height: 100px;
+    transition: all 0.5s ease-in-out;
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .navbar a {
+    font-size: 2rem;
+    color: var(--black);
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.header .navbar a:hover {
+    background-color: var(--pop);
+    color: #fff;
+}
+
+.header .navbar-brand a {
+    pointer-events: none; /* Disable hover effects for the logo */
+    cursor: default; /* Change cursor to default to indicate non-clickable */
+    opacity: 0.6; /* Reduce opacity to visually indicate it's disabled */
+    text-decoration: none; /* Ensure no underline appears */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 2rem;
+}
+
+.header.scrolled {
+    background: #ffeac8c5; /* Darker background */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+.header .navbar-brand a {
+    pointer-events: none; /* Prevent hover effects */
+    cursor: default; /* Change cursor to indicate non-clickable */
+    transition: none; /* Remove any transition effects */
+}
+
+
+/* Header */
+
+.header .icons{
+    padding-left: 2rem;
+}
+.header .icons i{
+    font-size: 2rem;
+    color: #CCB187;
+    margin: 50px 0 30px 20px;
+}
+
+/*About Us*/
+.about{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .image img{
+    width: 454px;
+    max-width: 454px;
+    height: auto;
+    margin-right: 100px;
+    margin-top:200px;
+}
+
+.about .content{
+    max-width: 50%;
+    height: auto;
+    margin-left: 80px;
+    margin-top: 200px;
+}
+
+.about .content h2{
+    font-size: 96px;
+    color: #CCB187;
+    font-family: serif;
+}
+.about .content h3{
+    font-size: 48px;
+    color: #746855;
+    font-family: serif;
+    font-weight: normal;
+    
+}
+
+.about .content .divider{
+    height: 1px;
+    max-width: 900px;
+    background-color: #746855 ;
+    border: 20%;
+    margin: 30px 0;
+}
+
+.about .content p{
+    font-size: 24px;
+    justify-content: space-between;
+    letter-spacing: 3px;
+    
+}
+
+.about .content p .highlight{
+    color: #CCB187;
+}
+
+.about .content .btn {
+    position: absolute;
+    z-index: 1;
+    background-color: #DAC39F;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 40px;
+    color: #000;
+    
+}
+
+.about .content .btn span{
+    margin-left: 15px;
+}
+
+
+/*  Section Package  */
+.card-package{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.text-title{
+    font-size: 64px;
+    font-weight: normal; 
+}
+
+.text-subtitle{
+    font-size: 32px;
+    font-weight: normal; 
+    /* margin-left: 3%; */
+}
+
+
+.package-img-left{
+    height: 500px;
+    width: auto;
+    display: flex;
+}
+
+.text-content-right{
+    display: flex;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.text-content-left{
+    display: flex;
+    font-size: 2rem;
+    width: 650px;
+    line-height: 1.5;
+}
+
+.package-img-right{
+    position: absolute;
+    height: 600px;
+    width: auto;
+    display: flex;
+    rotate: -90deg;
+    top: 1200px;
+    margin-left: 620px;
+}
+
+/* Our Packages */
+
+.divider-left{
+    height: 1px;
+    max-width: 600px;
+    background-color: #746855 ;
+    border: 20%;
+    margin: 10px 0;
+    /* margin-left: 3%; */
+}
+
+.box-contain{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.box{
+    position: relative;
+    padding: 0px;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    overflow: hidden;
+}
+
+.img-wrap{
+    width: 390px;
+    height: auto;
+    z-index: -1;
+}
+
+.our-package-title{
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    font-size: 25px;
+    font-weight: normal;
+    color: #fff;
+    z-index: 1;
+}
+
+.package-description {
+    font-family: 'Jacques Francois', serif;
+    line-height: 21px;
+    position: absolute;
+    left: 50px;
+    bottom: 48px;
+    font-size: 16px;
+    color: #fff;
+    width: 300px;
+}
+
+.modal .package-description,.promotion-description{
+    font-family: 'Jacques Francois', serif;
+    line-height: 21px;
+    width: 100%;
+    position: static;
+    left: 50px;
+    bottom: 48px;
+    font-size: 16px;
+    color: var(--pop);
+}
+
+.package-price{
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFEDD1;
+}
+
+.modal .package-price,.promotion-price{
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--pop);
+}
+
+.reserve-btn-text{
+    font-size: 1.5rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.reserve-btn-text:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.reserve-btn {
+    position: absolute;
+    bottom: 45px;
+    right: 10px;
+    font-size: 12px;
+    z-index: 1;
+    background-color: #ffffffd6;
+    padding: 7px 24px;
+    cursor: pointer;
+    border-radius: 50px;
+    color: #000;
+}
+
+.reserve-btn:hover {
+    background-color: var(--pop);
+    color: #fff;
+}
+
+.reserve-promo-btn {
+    position: absolute;
+    bottom: 45px;
+    right: 45px;
+    font-size: 12px;
+    z-index: 1;
+    background-color: #ffffffd6;
+    padding: 7px 24px;
+    cursor: pointer;
+    border-radius: 50px;
+    color: #000;
+}
+
+.reserve-promo-btn:hover {
+    background-color: var(--pop);
+    color: #fff;
+}
+
+/* Section Promotion */
+.promotion-subtitle {
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--pop);
+    margin-bottom: 1rem;
+}
+
+.promotion-subtitle2 {
+    font-size: 1.6rem;
+    color: #746855;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.promotion-divider {
+    height: 2px;
+    max-width: 600px;
+    background-color: #746855;
+    opacity: 0.5;
+}
+
+.promotion-body {
+    position: relative;
+    padding: 0px;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    overflow: hidden;
+}
+
+.promotion-body img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Promotion Grid */
+
+.mt-10 {
+    margin-top: 100px;
+}
+
+.mt-20 {
+    margin-top: 200px;
+}
+
+
+
+.footer{
+    background: #746855;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+
+        position: absolute;
+        top: 100%; right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+}
+
+/* Adjust the logo size and background for mobile screens */
+@media (max-width: 768px) {
+    .header .logo img {
+        height: 50px; /* Set a smaller height for the logo */
+        width: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure the image fits within the container */
+        background: none; /* Remove any white background */
+        margin: 0 auto; /* Center the logo */
+    }
+
+    .header {
+        padding: 0.5rem 1rem; /* Reduce padding for the header on mobile */
+    }
+}
+
+/* Footer */
+
+.semi-footer{
+    background-color: #DAC39F;
+    color: #282828;
+}
+
+.semi-footer a{
+    color: #282828;
+}
+
+.semi-footer h4{
+    color: #282828;
+    border-bottom: 1px solid;
+    padding: 10px;
+}
+
+.footer{
+    background: #000;
+    color: #fff;
+    font-size: 0.7rem;
+    height: 20px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.logo{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    padding: 0%;
+    border-radius: 50%;
+}
+
+.card-caption{
+    border-radius: 15px !important;
+    box-shadow: 0px 0px 20px rgb(208 207 207);
+}
+
+.card-rent{
+    height: 100%;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 0px 20px rgb(208 207 207);
+    transition: 0.3s;
+}
+
+.card-rent:hover{
+    transform: scale(1.025);
+}
+
+.card{
+    border: none;
+}
+
+.card > .card-body {
+    box-shadow: 0px 0px 10px #a5a5a5;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.img-card{
+    border-radius: 15px 15px 0 0;
+}
+
+.img-card-bottom{
+    border-radius: 0px 0px 20px 20px;
+}
+
+.warpper-card-img{
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+}
+
+.warpper-card-img img{
+    position: absolute;
+    top: 0; 
+    transition: 0.5s;
+}
+
+.warpper-card-img img:hover{
+    transform: scale(1.1);
+}
+
+.btn-viewmore{
+    color: #fff;
+    background-color: #000;
+    border-radius: 20px;
+}
+
+.btn-submit{
+    border-radius: 20px;
+}
+
+.btn-tag {
+    color: #fff;
+    background-color: #132843;
+    border-color: #132843;
+    border-radius: 20px;
+    box-shadow: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: 0.5s;
+}
+
+.btn-tag:hover {
+    color: #fff;
+    background-color: #233e61;
+    border-color: #233e61;
+    transform: scale(1.1);
+}
+
+.btn-tag.active {
+    color: #fff;
+    background-color: #233e61;
+    border-color: #233e61;
+    transform: scale(1.15);
+}
+
+
+.btn-group-custom button{
+    margin-bottom: 0.5rem;
+    width: 100px;
+}
+
+.btn-group-custom a:hover{
+    text-decoration: none!important;
+}
+   
+.blog-content{
+    padding: 50px 100px;
+    box-shadow: 0px 0px 10px #a5a5a5;
+    border-radius: 20px;
+}
+
+/* Section login */
+.wrapper{
+    position: relative;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+}
+
+.form-box-login h2{
+    font-size: 96px;
+    color: #CCB187;
+    font-family: serif;
+    text-align: center;
+}
+
+.form-box-login h3{
+    font-size: 48px;
+    color: #746855;
+    font-family: serif;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-box-login .input-box-name {
+    text-align: center;
+}
+
+.input-box-name label {
+    font-size: 20px;
+    line-height: 3.5;
+    letter-spacing: 2px;
+}
+
+.input-box-name input {
+    background-color: #fff;
+    width: 300px;
+    height: auto;
+    margin-left: 20px;
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    margin: 10px 0; 
+}
+
+
+.form-box-login .forgot a{
+    color: rgba(116, 104, 85, 0.4);
+    width: 173px;
+    height: 26px;
+    margin-left: 530px;
+}
+
+.form-box-login .btn {
+    position: absolute;
+    z-index: 1;
+    background-color: #DAC39F;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #000;
+    margin: 10px 250px;
+    
+}
+
+.sign-up{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #797163;
+}
+
+.sign-up a{
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.sign-up-link {
+    color: #4E4433;
+}
+
+.sign-up a:hover{
+    text-decoration: none;
+    color: #CCB187;
+}
+
+.forgot-id{
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin-top: 200px;
+    text-align: center;
+    
+}
+
+.forgot-id h1{
+    font-size: 50px;
+    color: #746855;
+    margin-bottom: 70px;
+    letter-spacing: 3;
+    font-weight: lighter;
+}
+
+.forgot-id h2{
+    font-size: 22px;
+    letter-spacing: 2;
+    margin-bottom: 30px;
+}
+
+.forgot-id input{
+    background-color: #fff;
+    padding: 15px 180px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    opacity: 0.8;
+}
+
+.forgot-id .btn-back{
+    font-size: 20px;
+    padding: 10px 50px;
+    color: #000;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.forgot-id p span{
+    margin: 0 30px;
+}
+
+.forgot-id .btn-sumit{
+    font-size: 24px;
+    padding: 10px 30px;
+    color: #000;
+    border-radius: 20px;
+    background-color: #DAC39F;
+    margin-left: 10px;
+}
+
+/* Section Sign Up */
+
+/* transition */
+.form-box.signUp{
+    transition: transform .18s ease;
+    transform: translateX(0);
+    width: 300px;
+}
+
+.active .form-box.signUp{
+    transition: none;
+    transform: translateX(-870px);
+}
+
+/* transition box information */
+.form-box.information{
+    position: absolute;
+    transition: none;
+    transform: translateX(870px);
+}
+
+.active .form-box.information{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .form-box h3{
+    font-size: 48px;
+    color: #746855;
+    font-family: serif;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.wrapper .form-box h2{
+    text-align: center;
+    font-size: 48px;
+    font-weight: lighter;
+    color: #746855;
+    margin-bottom: 20px;
+}
+
+/* input box log-in page */
+.form-box .input-box login{
+    text-align: center;
+}
+.form-box .input-boxlogin label{
+    font-size: 24px;
+    margin-right: 30px;
+    line-height: 3.5;
+    letter-spacing: 2px;
+}
+
+.form-box .input-boxlogin input{
+    background-color: #fff;
+    padding: 15px 150px;
+    border-radius: 50px;
+}
+
+.form-box .input-boxlogin.num label{
+    font-size: 24px;
+    padding-right: 8px;
+    line-height: 3;
+    letter-spacing: 2px;
+}
+
+/* Forgot */
+
+.form-box .forgot a{
+    color: rgba(116, 104, 85, 0.4);
+    width: 173px;
+    height: 26px;
+    margin-left: 630px;
+    
+}
+
+.form-box .btn {
+    font-size: 24px;
+    padding: 10px 50px;
+    color: #000;
+    border-radius: 20px;
+    background-color: #DAC39F;
+    margin-left: 330px;
+    margin-top: 20px;
+    
+}
+
+.form-box.login .sign-up{
+    font-size: 16px;
+}
+.form-box.login .sign-up p{
+    color: rgba(116, 104, 85, 0.4);
+    margin-top: 20px;
+    
+}
+.form-box.login .sign-up p a{
+    margin-left: 20px;
+    
+}
+.form-box.login .sign-up p .sign-up-link{
+    color: #4E4433;
+}
+
+/* input box sign up & information */
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #746855;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #000;
+    letter-spacing: 3px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box select {
+    width: 100%;
+    padding: 10px 15px;
+    padding-left: 0px;
+    font-size: 24px;
+    color: #333;
+    border-radius: 5px;
+    background: #ffffff00;
+    appearance: none;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-box select option {
+    font-size: 1rem;
+    color: #333;
+}
+
+.label-wrapper label {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.label-wrapper label.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.input-box select {
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23746855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.dob-text {
+    font-size: 24px;
+    padding: 0px;
+    color: #333;
+    border-radius: 5px;
+    background: #ffffff00;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #746855;
+    text-indent: 5px;
+
+}
+
+/* Password */
+/* Password input wrapper */
+.input-box-password {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #746855;
+    margin: 30px 0;
+}
+
+/* Password input field */
+.input-box-password input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #746855;
+    text-indent: 5px;
+}
+
+/* Label for password input */
+.input-box-password label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #000;
+    letter-spacing: 3px;
+    pointer-events: none;
+    transition: 0.5s;
+} 
+
+/* Change label position when input is focused or filled */
+.input-box-password input:focus~label,
+.input-box-password input:valid~label {
+    top: -5px;
+}
+
+/* Show/Hide password toggle button */
+.input-box-password .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23746855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 17px;
+    cursor: pointer;
+    transition: background-image 0.3s ease;
+}
+
+/* Change the icon when password is visible */
+.input-box-password .toggle-password.show {
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23746855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg>');
+}
+
+.form-box .btn-back-login{
+    font-size: 24px;
+    padding: 10px 50px;
+    color: #000;
+    border-radius: 20px;
+    background-color: #fff;
+    
+}
+.wrapper .form-box p{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.wrapper .form-box p span{
+    margin: 0 30px;
+}
+
+.wrapper .form-box .btn-next-info{
+    font-size: 24px;
+    padding: 10px 50px;
+    color: #000;
+    border-radius: 20px;
+    background-color: #DAC39F;
+    margin-left: 10px;
+}
+
+.wrapper .form-box .btn-back-singUp{
+    font-size: 24px;
+    padding: 10px 50px;
+    color: #000;
+    border-radius: 20px;
+    background-color: #fff;
+    
+}
+
+.btn-signUp{
+    font-size: 24px;
+    padding: 10px 30px;
+    color: #000;
+    border-radius: 20px;
+    background-color: #DAC39F;
+}
+
+.btn-signUp:hover{
+    background-color: #CCB187;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (optional) */
+}
+
+/* Sweet Alert */
+
+/* Customize the popup */
+.custom-popup {
+    background-color: #f9f9f9; /* Light gray background */
+    border: 2px solid #DAC39F; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    margin-top: 12rem;
+}
+
+/* Customize the title */
+.custom-title {
+    color: #DAC39F;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Customize the content text */
+.custom-content {
+    color: #333; /* Dark gray text */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+}
+
+/* Customize the confirm button */
+.custom-confirm-button {
+    background-color: #DAC39F;
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.custom-confirm-button:hover {
+    background-color: #d2b079;
+}
+
+/* Sweetalert */
+/* 1. Error */
+.custom-popup {
+    background-color: #ffe6e6; /* Light red background */
+    border: 2px solid #ff4d4d; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Customize the title */
+.custom-title {
+    color: #ff4d4d; /* Red text */
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Customize the content text */
+.custom-content {
+    color: #333; /* Dark gray text */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Customize the confirm button */
+.custom-confirm-button {
+    background-color: #ff4d4d; /* Red background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-confirm-button:hover {
+    background-color: #e63939; /* Darker red on hover */
+}
+
+/* 2. Contact */
+.custom-swal-popup {
+    background-color: #f9f9f9; /* Light gray background */
+    border: 2px solid #ccb187; /* Border color */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+}
+
+/* Custom SweetAlert Title */
+.custom-swal-title {
+    font-family: 'Jacques Francois', serif; /* Custom font */
+    font-size: 24px;
+    color: #746855; /* Custom text color */
+}
+
+/* Custom Confirm Button */
+.custom-swal-confirm-button {
+    background-color: #ccb187; /* Custom button color */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-swal-confirm-button:hover {
+    background-color: #b89e6b; /* Darker shade on hover */
+}
+
+/* Custom Cancel Button */
+.custom-swal-cancel-button {
+    background-color: #f5b7b1; /* Soft red */
+    color: #721c24; /* Dark red text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-swal-cancel-button:hover {
+    background-color: #f1948a; /* Darker red on hover */
+}
+
+/* 3. */
+
+
+/* Modal Reservation */
+
+/* Modal Background */
+.modal-content {
+    background-color: #f9f9f9; /* Light gray background */
+    margin-top: 150px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Modal Header */
+.modal-header {
+    background-color: var(--border);
+    color: white;
+    border-bottom: 2px solid var(--pop);
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    padding: 15px;
+}
+
+.modal-title {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+}
+
+/* Close Button */
+.btn-close {
+    color: white;
+    opacity: 1;
+}
+
+.btn-close:hover {
+    color: #ffcccc; /* Light red on hover */
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 20px;
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+}
+
+
+/* Form Labels */
+.modal-body .form-label {
+    font-weight: bold;
+    color: #333; /* Green text */
+}
+
+/* Form Inputs */
+.modal-body .form-control {
+    border: 1px solid var(--pop); /* Green border */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.modal-body .form-control:focus {
+    border-color: var(--pop);
+    box-shadow: 0 0 5px var(--pop); /* Green glow */
+}
+
+/* Textarea */
+.modal-body textarea {
+    resize: none; /* Disable resizing */
+}
+
+/* Confirm Button */
+.btn-confirm {
+    background-color: var(--pop);
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto; 
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+}
+
+.btn-confirm:hover {
+    background-color: #CCB187;
+}
+
+.button {
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+/* Modal Footer (Optional) */
+.modal-footer {
+    border-top: 2px solid var(--pop);
+    padding: 15px;
+    text-align: right;
+}
+
+.list-group-item {
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid var(--pop); /* Green border */
+    font-size: 16px;
+    border-radius: 10px 10px 10px 10px !important;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.list-group-item:hover {
+    box-shadow: 0 0 5px var(--pop); /* Green glow */
+}
+
+.my-programs-section{
+    margin-top: 100px;
+}
+
+.profile-section{
+    margin-top: 100px;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* Aspect ratio 4:3 */
+    overflow: hidden;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Contact Form */
+.contact-form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container h1 {
+    text-align: center;
+    color: var(--border);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #746855;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--pop);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #ccb187;
+}
+
+
+/* Profile Section */
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-section {
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Title for the profile section */
+.profile-section h2 {
+    font-size: 36px;
+    color: #CCB187; /* Gold-like color */
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Jacques Francois', serif;
+}
+
+/* Input box styling */
+.profile-section .input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.profile-section .input-box input,
+.profile-section .input-box select {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.profile-section .input-box {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border-bottom: none;
+}
+
+.profile-section .input-box input:focus,
+.profile-section .input-box select:focus {
+    border-color: #CCB187; /* Highlight border on focus */
+}
+
+/* Label styling */
+.profile-section .input-box label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-color: #CCB187;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Button styling */
+.profile-section .btn-update {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #CCB187;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.profile-section .btn-update:hover {
+    background-color: #b89e6b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-section .input-box {
+        margin-bottom: 15px;
+    }
+
+    .profile-section .btn-update {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* Toggle */
+.toggle-header {
+    font-size: 24px;
+    color: #746855;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-header:hover {
+    background-color: #CCB187;
+    color: #fff;
+}
+
+/* Toggle Content */
+.toggle-content {
+    display: none;
+    margin-top: 10px;
+}

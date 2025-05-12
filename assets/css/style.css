@@ -1,0 +1,312 @@
+/* Table of Content */
+
+/* 
+1. Section Settings 
+2. Section Carousel
+3. Section Condo
+4. Section Footer
+5. Section Navbar
+6. Section Page-Title
+8. Section Profile
+card
+0d3b66-faf0ca-f7e294-f4d35e-ee964b
+#002443#202020
+
+#132743
+#407088
+#70ADB5
+#FFCBCB
+*/
+
+/* Section Settings */
+    html, body{
+        height: 100%;
+        font-family: 'Kanit', serif;
+    }
+
+    .bg-alpha{
+        background: rgb(0,0,0,0.5);
+    }
+
+    .border-short-botton{
+        position: relative;
+        padding: 20px 0;
+
+    }
+
+    .border-short-botton::after{
+        position: absolute;
+        content: "";
+        width: 100px;
+        background : rgb(0, 0, 0);
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        margin-left: -50px;
+        background: #595959;
+    }
+
+    /* Section Carousel */
+        .carousel,
+        .carousel-inner,
+        .carousel-item,
+        .carousel-inner .active{
+            height: 100%;
+        }
+
+        .carousel-img{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .carousel-caption{
+            top: 40%;
+        }
+
+        .backscreen{
+            background: rgb(0,0,0,0.5);
+            width: 100%;
+            height: 100%;
+            
+        }
+    /* Section Condo */
+
+    .card-caption{
+        border-radius: 15px !important;
+        box-shadow: 0px 0px 20px rgb(208 207 207);
+    }
+    
+    .card-rent{
+        height: 100%;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 0px 0px 20px rgb(208 207 207);
+        transition: 0.3s;
+    }
+    
+    .card-rent:hover{
+        transform: scale(1.025);
+    }
+
+    .card{
+        border: none;
+    }
+    
+    .card > .card-body {
+        box-shadow: 0px 0px 10px #a5a5a5;
+        border-radius: 20px;
+        padding: 25px;
+    }
+
+    .img-card{
+        border-radius: 15px 15px 0 0;
+    }
+
+    .img-card-bottom{
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    .warpper-card-img{
+        position: relative;
+        padding-top: 56.25%;
+        overflow: hidden;
+    }
+
+    .warpper-card-img img{
+        position: absolute;
+        top: 0; 
+        transition: 0.5s;
+    }
+
+    .warpper-card-img img:hover{
+        transform: scale(1.1);
+    }
+
+    .btn-viewmore{
+        color: #fff;
+        background-color: #000;
+        border-radius: 20px;
+    }
+
+    .btn-submit{
+        border-radius: 20px;
+    }
+
+    .btn-tag {
+        color: #fff;
+        background-color: #132843;
+        border-color: #132843;
+        border-radius: 20px;
+        box-shadow: 10px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px;
+        margin-left: 15px;
+        margin-right: 15px;
+        transition: 0.5s;
+    }
+
+    .btn-tag:hover {
+        color: #fff;
+        background-color: #233e61;
+        border-color: #233e61;
+        transform: scale(1.1);
+    }
+
+    .btn-tag.active {
+        color: #fff;
+        background-color: #233e61;
+        border-color: #233e61;
+        transform: scale(1.15);
+    }
+    
+
+    .btn-group-custom button{
+        margin-bottom: 0.5rem;
+        width: 100px;
+    }
+
+    .btn-group-custom a:hover{
+        text-decoration: none!important;
+    }
+       
+    .blog-content{
+        padding: 50px 100px;
+        box-shadow: 0px 0px 10px #a5a5a5;
+        border-radius: 20px;
+    }
+
+    @media (max-width: 991px) {
+        .blog-content{
+            padding: 40px 50px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .blog-content{
+            padding: 0px 50px;
+        }
+    }
+
+    .owl-carousel .card-body{
+        height: 150px;
+        overflow: hidden;
+    }
+
+/* Section Footer */
+
+    .semi-footer{
+        background-color: #132743;
+        color: #fff;
+    }
+
+    .semi-footer a{
+        color: #fff;
+    }
+
+    .semi-footer h4{
+        color: #fff;
+        border-bottom: 1px solid;
+        padding: 10px;
+    }
+
+    .footer{
+        background: #000;
+        color: #fff;
+        font-size: 0.7rem;
+        height: 20px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .logo{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        padding: 0%;
+        border-radius: 50%;
+    }
+
+    /* Section Navbar */
+        .navbar {
+            padding: 25px;
+            transition: 0.5s;
+        }
+
+        .bg-blue {
+            background-color: #132743;
+        }
+
+
+    /* Section Page-Title */
+    .page-image{
+        padding: 200px 0px 120px;
+    
+        text-align: center;
+        color: #fff;
+        background: rgb(0, 0, 0, 0.5);
+    }
+
+    .page-step{
+        padding: 200px 0px 120px;
+    
+        text-align: center;
+        color: #fff;
+        background: rgb(0, 0, 0, 0.5);
+    }
+
+    /* Section Profile */
+    .profile img {
+        display: inline-block;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px rgb(54, 52, 52);
+      }
+      
+      .no-highlight{
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+      }    
+
+      .prompt{
+        font-family: Prompt ,sans-serif;
+      }
+
+    .responsive-img{
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        justify-content: center;
+    }
+
+    /* Condo */
+
+    .detail-property {
+        background-color: #fff;
+        border: 1px solid #ecf3fc;
+        border-radius: 8px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px;
+        max-width: calc(100% - 20px);
+        margin: 10px auto;
+        padding: 15px 10px;
+    }
+
+    .detail-property-list-title{
+        color: #828c9e;
+        padding-right: 5px;
+    }
+
+    .detail-property-list
+    {
+        align-items: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: .3px;
+        line-height: 24px;
+    }
+
+    .information-title{
+        color: #002443;
+    }
